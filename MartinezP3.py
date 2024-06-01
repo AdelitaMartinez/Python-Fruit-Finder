@@ -4,6 +4,8 @@
 # Purpose: Provides users capability to find fruit in a string
 # Python Version: 3.12.3
 
+# List of fruits 
+
 fruits = [
 'Apricot',
 'Asian Pear',
@@ -54,3 +56,10 @@ fruits = [
 'Ugli Fruit',
 'Watermelon'
 ]
+
+title = '**Welcome to Fruit Finder**'
+width = 80 
+halfway = width//2
+start_at = halfway - 6 
+line = start_at*' ' + title
+print(line)
