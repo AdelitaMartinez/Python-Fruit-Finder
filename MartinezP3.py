@@ -56,6 +56,8 @@ fruits = [
 'Ugli Fruit',
 'Watermelon'
 ]
+ 
+# Welcome and Introductions
 
 title = '**Welcome to Fruit Finder**'
 width = 80 
