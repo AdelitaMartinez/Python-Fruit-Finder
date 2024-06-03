@@ -74,7 +74,8 @@ print('Please enter a sentence or a list of words, and the program will tell you
 print('\n')
 
 # Get user input (.strip() method =  remove whitespaces from input)
-user_input = input("Enter a sentence or list of words: ").strip()
+# .lower() method to convert input to lowercase
+user_input = input("Enter a sentence or list of words: ").strip().lower()
 
 # Create empty array to store found fruits
 found_fruits = []
@@ -83,13 +84,21 @@ found_fruits = []
 # Use if statement to look for fruits in input
 
 for fruit in fruits: # For Loop
-  if fruit in user_input: # if statement
+  if fruit.lower() in user_input: # if statement and .lower() to check if lowecase versions match lowercase input
     found_fruits.append(fruit) # .append() adds fruit to back of the array
 
 # Display found fruits or no fruits found using if else statement
 if found_fruits: 
   print('\n Fruits found in your input: ')
-for fruit in found_fruits:
-  print(fruit)
+  for fruit in found_fruits:
+    print(fruit)
+    # Count the number of fruits found
+    num_fruits = len(found_fruits) # len() = built in function that returns length
+    print('\n Number of fruits found: {num-fruits}')
+
+    # Replace instance of fruit with "Brussels Sprouts"
+    first_fruit = found_fruits[0]
+    new_input = user_input.replace(first_fruit.lower(), 'brussels sprouts', 1)
+    print('\n Updated input: {new_input}')
 else: 
   print('\n No fruits found')
