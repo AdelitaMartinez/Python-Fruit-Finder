@@ -59,6 +59,7 @@ fruits = [
  
 # Welcome
 
+print('\n')
 title = '**Welcome to Fruit Finder**'
 width = 80 
 halfway = width//2
@@ -68,37 +69,45 @@ print(line1)
 
 # Introduction and Instructions
 
-print('\nThis program allows users to enter an input and will show if any fruits in the sentence match a fruit in a premade list.')
-print('Please enter a sentence or a list of words, and the program will tell you which fruits, if any, are mentioned')
-#print('*Please note that fruit names are case sensitive')
+print('\nThis program allows users to enter a sentence and will identify any fruits mentioned based on a predefined list.')
+print('Please enter a sentence, and the program will tell you which fruits, if any, are mentioned')
 print('\n')
 
 # Get user input (.strip() method =  remove whitespaces from input)
 # .lower() method to convert input to lowercase
-user_input = input("Enter a sentence or list of words: ").strip().lower()
+user_input = input("Enter your sentence here: ").strip().lower()
 
 # Create empty array to store found fruits
 found_fruits = []
 
 # Iterate over input using For Loop
 # Use if statement to look for fruits in input
-
 for fruit in fruits: # For Loop
   if fruit.lower() in user_input: # if statement and .lower() to check if lowecase versions match lowercase input
     found_fruits.append(fruit) # .append() adds fruit to back of the array
 
 # Display found fruits or no fruits found using if else statement
 if found_fruits: 
-  print('\n Fruits found in your input: ')
-  for fruit in found_fruits:
-    print(fruit)
+  for fruit in found_fruits: 
+    print(f'\n Fruits found in your input: {fruit}')
+    
     # Count the number of fruits found
     num_fruits = len(found_fruits) # len() = built in function that returns length
-    print('\n Number of fruits found: {num-fruits}')
+    print(f'\n Number of fruits found: {num_fruits}')
 
     # Replace instance of fruit with "Brussels Sprouts"
     first_fruit = found_fruits[0]
     new_input = user_input.replace(first_fruit.lower(), 'brussels sprouts', 1)
-    print('\n Updated input: {new_input}')
+    print(f'\n Updated input: {new_input}')
+    print('\n')
 else: 
-  print('\n No fruits found')
+  print('\n No fruits found. Please try again. \n')
+
+# Goodbye
+goodbye = '**Thank you for using Fruit Finder!**'
+width = 80 
+halfway = width//2
+start_at = halfway - 6 
+last_line = start_at*' ' + goodbye
+print(last_line)
+print('\n')
