@@ -79,4 +79,17 @@ user_input = input("Enter a sentence or list of words: ").strip()
 # Create empty array to store found fruits
 found_fruits = []
 
-# Iterate over input using For Loop looking for fruit
+# Iterate over input using For Loop
+# Use if statement to look for fruits in input
+
+for fruit in fruits: # For Loop
+  if fruit in user_input: # if statement
+    found_fruits.append(fruit) # .append() adds fruit to back of the array
+
+# Display found fruits or no fruits found using if else statement
+if found_fruits: 
+  print('\n Fruits found in your input: ')
+for fruit in found_fruits:
+  print(fruit)
+else: 
+  print('\n No fruits found')
