@@ -63,5 +63,7 @@ title = '**Welcome to Fruit Finder**'
 width = 80 
 halfway = width//2
 start_at = halfway - 6 
-line = start_at*' ' + title
-print(line)
+line1 = start_at*' ' + title
+print(line1)
+
+print('\nThis program allows users to find any fruit names mentioned in a provided string.')
