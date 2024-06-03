@@ -57,7 +57,7 @@ fruits = [
 'Watermelon'
 ]
  
-# Welcome and Introductions
+# Welcome
 
 title = '**Welcome to Fruit Finder**'
 width = 80 
@@ -66,4 +66,12 @@ start_at = halfway - 6
 line1 = start_at*' ' + title
 print(line1)
 
-print('\nThis program allows users to find any fruit names mentioned in a provided string.')
+# Introduction and Instructions
+
+print('\nThis program allows users to enter an input and will show if any fruits in the sentence match a fruit in a premade list.')
+print('Please enter a sentence or a list of words, and the program will tell you which fruits, if any, are mentioned')
+print('*Please note that fruit names are case sensitive')
+print('\n')
+
+
+
