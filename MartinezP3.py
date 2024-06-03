@@ -70,8 +70,13 @@ print(line1)
 
 print('\nThis program allows users to enter an input and will show if any fruits in the sentence match a fruit in a premade list.')
 print('Please enter a sentence or a list of words, and the program will tell you which fruits, if any, are mentioned')
-print('*Please note that fruit names are case sensitive')
+#print('*Please note that fruit names are case sensitive')
 print('\n')
 
+# Get user input (.strip() method =  remove whitespaces from input)
+user_input = input("Enter a sentence or list of words: ").strip()
 
+# Create empty array to store found fruits
+found_fruits = []
 
+# Iterate over input using For Loop looking for fruit
